@@ -29,7 +29,7 @@ This repository contains the **ISOM Department's Faculty Performance Standards F
 
 The framework was developed during AY 2025-26 as a pilot initiative to bring clarity, equity, and transparency to faculty performance evaluation, while honoring the diverse contributions of our faculty across teaching, scholarship, and service.
 
-### 🌐 **[View the Live Site →](https://your-username.github.io/isom-smart-goals/)**
+### 🌐 **[View the Live Site →](https://harslan.github.io/isom-smart-goals/)**
 
 ---
 
@@ -209,7 +209,7 @@ This site is designed for GitHub Pages deployment:
 4. Choose **main** branch and **/ (root)** folder
 5. Click **Save**
 
-Your site will be live at: `https://your-username.github.io/isom-smart-goals/`
+Your site will be live at: `https://harslan.github.io/isom-smart-goals/`
 
 ---
 
