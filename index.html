@@ -3,944 +3,472 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ISOM Department Faculty Performance Standards - SMART Goals Framework for AY 2025-26">
-    <meta name="theme-color" content="#0F172A">
-    <title>ISOM Faculty Standards | Sawyer Business School</title>
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
-    
+    <title>ISOM Faculty Performance Standards | Sawyer Business School</title>
+    <meta name="description" content="ISOM Department's 'Meets Expectations' criteria and SMART Goals framework for AY 2025-26">
     <style>
-        /* ============================================
-           CSS CUSTOM PROPERTIES - Design Tokens
-           ============================================ */
         :root {
-            /* Colors - Sophisticated Navy & Gold */
-            --color-primary: #0F172A;
-            --color-primary-light: #1E293B;
-            --color-secondary: #334155;
-            --color-accent: #C9A227;
-            --color-accent-light: #E4C767;
-            --color-teal: #0D9488;
-            --color-teal-light: #14B8A6;
-            
-            /* Surfaces */
-            --surface-base: #FAFAF9;
-            --surface-elevated: #FFFFFF;
-            --surface-muted: #F5F5F4;
-            --surface-dark: #0F172A;
-            
-            /* Text */
-            --text-primary: #1C1917;
-            --text-secondary: #57534E;
-            --text-muted: #A8A29E;
-            --text-inverse: #FAFAF9;
-            
-            /* Borders */
-            --border-light: #E7E5E4;
-            --border-medium: #D6D3D1;
-            
-            /* Shadows */
-            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-            --shadow-glow: 0 0 40px -10px rgb(201 162 39 / 0.3);
-            
-            /* Spacing Scale */
-            --space-1: 0.25rem;
-            --space-2: 0.5rem;
-            --space-3: 0.75rem;
-            --space-4: 1rem;
-            --space-5: 1.25rem;
-            --space-6: 1.5rem;
-            --space-8: 2rem;
-            --space-10: 2.5rem;
-            --space-12: 3rem;
-            --space-16: 4rem;
-            --space-20: 5rem;
-            --space-24: 6rem;
-            
-            /* Typography */
-            --font-display: 'Fraunces', Georgia, serif;
-            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            
-            /* Transitions */
-            --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
-            --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-            --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
-            
-            /* Border Radius */
-            --radius-sm: 0.375rem;
-            --radius-md: 0.5rem;
-            --radius-lg: 0.75rem;
-            --radius-xl: 1rem;
-            --radius-2xl: 1.5rem;
-            --radius-full: 9999px;
+            --color-navy: #1B365D;
+            --color-navy-light: #2a4a7a;
+            --color-gold: #B8860B;
+            --color-gold-light: #D4A84B;
+            --color-teal: #0D7377;
+            --color-text: #333;
+            --color-text-light: #666;
+            --color-bg: #fafafa;
+            --color-white: #fff;
+            --color-border: #e0e0e0;
+            --font-serif: 'Georgia', 'Times New Roman', serif;
+            --font-sans: 'Helvetica Neue', Arial, sans-serif;
         }
 
-        /* ============================================
-           RESET & BASE
-           ============================================ */
-        *, *::before, *::after {
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        html {
-            scroll-behavior: smooth;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
         body {
-            font-family: var(--font-body);
-            font-size: 1rem;
+            font-family: var(--font-serif);
+            font-size: 18px;
             line-height: 1.7;
-            color: var(--text-primary);
-            background: var(--surface-base);
-            overflow-x: hidden;
+            color: var(--color-text);
+            background: var(--color-bg);
         }
 
-        img {
-            max-width: 100%;
-            display: block;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        button {
-            font-family: inherit;
-            cursor: pointer;
-            border: none;
-            background: none;
-        }
-
-        /* ============================================
-           TYPOGRAPHY
-           ============================================ */
-        h1, h2, h3, h4, h5 {
-            font-family: var(--font-display);
-            font-weight: 600;
-            line-height: 1.2;
-            letter-spacing: -0.02em;
-            color: var(--text-primary);
-        }
-
-        h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
-        h2 { font-size: clamp(1.875rem, 4vw, 2.5rem); }
-        h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
-
-        p {
-            color: var(--text-secondary);
-        }
-
-        .text-gradient {
-            background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        /* ============================================
-           LAYOUT UTILITIES
-           ============================================ */
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 var(--space-6);
-        }
-
-        .section {
-            padding: var(--space-24) 0;
-        }
-
-        .section--dark {
-            background: var(--surface-dark);
-            color: var(--text-inverse);
-        }
-
-        .section--dark h2,
-        .section--dark h3,
-        .section--dark h4 {
-            color: var(--text-inverse);
-        }
-
-        .section--dark p {
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        .section--muted {
-            background: var(--surface-muted);
-        }
-
-        /* ============================================
-           NAVIGATION
-           ============================================ */
-        .nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            padding: var(--space-4) 0;
-            transition: var(--transition-base);
-        }
-
-        .nav--scrolled {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            box-shadow: var(--shadow-md);
-            padding: var(--space-3) 0;
-        }
-
-        .nav__inner {
+        /* Header */
+        .header {
+            background: var(--color-navy);
+            padding: 1rem 2rem;
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            align-items: center;
         }
 
-        .nav__brand {
+        .header-brand {
             display: flex;
             align-items: center;
-            gap: var(--space-3);
+            gap: 1rem;
         }
 
-        .nav__logo {
-            width: 44px;
-            height: 44px;
-            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
-            border-radius: var(--radius-lg);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 700;
-            font-size: 0.75rem;
-            letter-spacing: 0.05em;
-        }
-
-        .nav__title {
-            font-family: var(--font-display);
-            font-size: 1.125rem;
-            font-weight: 600;
-            color: var(--text-primary);
-        }
-
-        .nav__subtitle {
-            font-size: 0.75rem;
-            color: var(--text-muted);
-            font-weight: 500;
-        }
-
-        .nav__links {
-            display: flex;
-            align-items: center;
-            gap: var(--space-1);
-            list-style: none;
-        }
-
-        .nav__link {
-            padding: var(--space-2) var(--space-4);
-            font-size: 0.875rem;
-            font-weight: 500;
-            color: var(--text-secondary);
-            border-radius: var(--radius-full);
-            transition: var(--transition-fast);
-        }
-
-        .nav__link:hover {
-            color: var(--text-primary);
-            background: var(--surface-muted);
-        }
-
-        .nav__link--active {
-            color: var(--color-primary);
-            background: var(--surface-muted);
-        }
-
-        .nav__toggle {
-            display: none;
-            width: 44px;
-            height: 44px;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-primary);
-            border-radius: var(--radius-md);
-            transition: var(--transition-fast);
-        }
-
-        .nav__toggle:hover {
-            background: var(--surface-muted);
-        }
-
-        /* Mobile Nav */
-        .mobile-nav {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(15, 23, 42, 0.95);
-            backdrop-filter: blur(20px);
-            z-index: 999;
-            padding: var(--space-24) var(--space-6);
-            opacity: 0;
-            visibility: hidden;
-            transition: var(--transition-base);
-        }
-
-        .mobile-nav--open {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .mobile-nav__links {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-2);
-        }
-
-        .mobile-nav__link {
-            display: block;
-            padding: var(--space-4);
-            font-size: 1.25rem;
-            font-weight: 500;
-            color: white;
-            border-radius: var(--radius-lg);
-            transition: var(--transition-fast);
-        }
-
-        .mobile-nav__link:hover {
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        .mobile-nav__close {
-            position: absolute;
-            top: var(--space-4);
-            right: var(--space-6);
+        .header-logo {
             width: 48px;
             height: 48px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            border-radius: var(--radius-full);
-            transition: var(--transition-fast);
-        }
-
-        .mobile-nav__close:hover {
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        /* Progress Bar */
-        .progress {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--color-accent), var(--color-teal));
-            z-index: 1001;
-            transform-origin: left;
-            transform: scaleX(0);
-        }
-
-        /* ============================================
-           HERO SECTION
-           ============================================ */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            background: var(--surface-dark);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero__bg {
-            position: absolute;
-            inset: 0;
-            opacity: 0.4;
-        }
-
-        .hero__bg-grid {
-            position: absolute;
-            inset: 0;
-            background-image: 
-                linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-            background-size: 60px 60px;
-        }
-
-        .hero__bg-gradient {
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(ellipse at 30% 20%, rgba(201, 162, 39, 0.15) 0%, transparent 50%),
-                        radial-gradient(ellipse at 70% 80%, rgba(13, 148, 136, 0.1) 0%, transparent 50%);
-        }
-
-        .hero__content {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: var(--space-24) var(--space-6);
-        }
-
-        .hero__badge {
-            display: inline-flex;
-            align-items: center;
-            gap: var(--space-2);
-            padding: var(--space-2) var(--space-4);
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: var(--radius-full);
-            font-size: 0.875rem;
-            font-weight: 500;
-            color: rgba(255, 255, 255, 0.8);
-            margin-bottom: var(--space-8);
-            animation: fadeInDown 0.6s ease;
-        }
-
-        .hero__badge-dot {
-            width: 8px;
-            height: 8px;
-            background: var(--color-accent);
-            border-radius: var(--radius-full);
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.6; transform: scale(1.3); }
-        }
-
-        .hero__title {
-            color: white;
-            margin-bottom: var(--space-6);
-            animation: fadeInUp 0.6s ease 0.1s both;
-        }
-
-        .hero__subtitle {
-            font-size: 1.25rem;
-            color: rgba(255, 255, 255, 0.6);
-            margin-bottom: var(--space-10);
-            animation: fadeInUp 0.6s ease 0.2s both;
-        }
-
-        .hero__cta {
-            display: inline-flex;
-            align-items: center;
-            gap: var(--space-2);
-            padding: var(--space-4) var(--space-8);
-            background: var(--color-accent);
-            color: var(--color-primary);
-            font-weight: 600;
-            font-size: 0.9375rem;
-            border-radius: var(--radius-full);
-            transition: var(--transition-base);
-            animation: fadeInUp 0.6s ease 0.3s both;
-            box-shadow: var(--shadow-glow);
-        }
-
-        .hero__cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 0 60px -10px rgb(201 162 39 / 0.5);
-        }
-
-        .hero__cta svg {
-            transition: var(--transition-fast);
-        }
-
-        .hero__cta:hover svg {
-            transform: translateY(3px);
-        }
-
-        .hero__stats {
-            display: flex;
-            justify-content: center;
-            gap: var(--space-12);
-            margin-top: var(--space-16);
-            animation: fadeInUp 0.6s ease 0.4s both;
-        }
-
-        .hero__stat {
-            text-align: center;
-        }
-
-        .hero__stat-value {
-            font-family: var(--font-display);
-            font-size: 3rem;
-            font-weight: 600;
-            color: var(--color-accent);
-            line-height: 1;
-        }
-
-        .hero__stat-label {
-            font-size: 0.875rem;
-            color: rgba(255, 255, 255, 0.5);
-            margin-top: var(--space-2);
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Scroll Indicator */
-        .hero__scroll {
-            position: absolute;
-            bottom: var(--space-8);
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: var(--space-2);
-            color: rgba(255, 255, 255, 0.4);
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            animation: fadeInUp 0.6s ease 0.5s both;
-        }
-
-        .hero__scroll-line {
-            width: 1px;
-            height: 40px;
-            background: linear-gradient(to bottom, rgba(255,255,255,0.3), transparent);
-            animation: scrollLine 1.5s ease infinite;
-        }
-
-        @keyframes scrollLine {
-            0% { transform: scaleY(0); transform-origin: top; }
-            50% { transform: scaleY(1); transform-origin: top; }
-            50.1% { transform: scaleY(1); transform-origin: bottom; }
-            100% { transform: scaleY(0); transform-origin: bottom; }
-        }
-
-        /* ============================================
-           SECTION HEADERS
-           ============================================ */
-        .section-header {
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto var(--space-16);
-        }
-
-        .section-header__label {
-            display: inline-flex;
-            align-items: center;
-            gap: var(--space-2);
-            padding: var(--space-2) var(--space-4);
-            background: rgba(13, 148, 136, 0.1);
-            color: var(--color-teal);
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            border-radius: var(--radius-full);
-            margin-bottom: var(--space-4);
-        }
-
-        .section--dark .section-header__label {
-            background: rgba(201, 162, 39, 0.15);
-            color: var(--color-accent);
-        }
-
-        .section-header__title {
-            margin-bottom: var(--space-4);
-        }
-
-        .section-header__desc {
-            font-size: 1.125rem;
-        }
-
-        /* ============================================
-           CARDS - Overview Grid
-           ============================================ */
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: var(--space-6);
-        }
-
-        .card {
-            background: var(--surface-elevated);
-            border: 1px solid var(--border-light);
-            border-radius: var(--radius-xl);
-            padding: var(--space-8);
-            transition: var(--transition-base);
-        }
-
-        .card:hover {
-            border-color: var(--border-medium);
-            box-shadow: var(--shadow-lg);
-            transform: translateY(-4px);
-        }
-
-        .card__icon {
-            width: 56px;
-            height: 56px;
-            background: linear-gradient(135deg, var(--surface-muted) 0%, var(--surface-base) 100%);
-            border-radius: var(--radius-lg);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            margin-bottom: var(--space-5);
-        }
-
-        .card__title {
-            font-size: 1.125rem;
-            margin-bottom: var(--space-3);
-        }
-
-        .card__text {
-            font-size: 0.9375rem;
-            line-height: 1.6;
-        }
-
-        /* ============================================
-           SMART BREAKDOWN
-           ============================================ */
-        .smart-grid {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: var(--space-4);
-        }
-
-        .smart-item {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: var(--radius-xl);
-            padding: var(--space-6);
-            text-align: center;
-            transition: var(--transition-base);
-        }
-
-        .smart-item:hover {
-            background: rgba(255, 255, 255, 0.06);
-            border-color: rgba(255, 255, 255, 0.15);
-            transform: translateY(-4px);
-        }
-
-        .smart-item__letter {
-            font-family: var(--font-display);
-            font-size: 3rem;
+            font-family: var(--font-sans);
             font-weight: 700;
-            background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            line-height: 1;
-            margin-bottom: var(--space-3);
+            font-size: 0.85rem;
         }
 
-        .smart-item__word {
-            font-weight: 600;
+        .header-text {
             color: white;
-            margin-bottom: var(--space-2);
         }
 
-        .smart-item__desc {
-            font-size: 0.8125rem;
-            color: rgba(255, 255, 255, 0.5);
+        .header-title {
+            font-family: var(--font-sans);
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .header-subtitle {
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+
+        .header-nav {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .header-nav a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .header-nav a:hover {
+            color: white;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-light) 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            font-family: var(--font-sans);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.02em;
+        }
+
+        .hero .subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            font-style: italic;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.15);
+        }
+
+        .hero-stat {
+            text-align: center;
+        }
+
+        .hero-stat-value {
+            font-family: var(--font-sans);
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--color-gold-light);
+            line-height: 1;
+        }
+
+        .hero-stat-label {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            margin-top: 0.25rem;
+        }
+
+        /* Main Content */
+        article {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            background: var(--color-white);
+        }
+
+        h2 {
+            font-family: var(--font-sans);
+            font-size: 1.6rem;
+            color: var(--color-navy);
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
+        }
+
+        h3 {
+            font-family: var(--font-sans);
+            font-size: 1.15rem;
+            color: var(--color-text);
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 1.25rem;
+        }
+
+        strong {
+            color: var(--color-navy);
+        }
+
+        /* Introduction Box */
+        .intro-box {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-left: 4px solid var(--color-gold);
+            padding: 1.75rem;
+            margin: 0 0 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .intro-box p {
+            margin-bottom: 0;
+            font-size: 1.05rem;
+        }
+
+        .intro-box p + p {
+            margin-top: 1rem;
+        }
+
+        /* Principle Cards */
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .principle {
+            background: white;
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+            padding: 1.25rem;
+        }
+
+        .principle-name {
+            font-family: var(--font-sans);
+            font-weight: 600;
+            color: var(--color-navy);
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .principle-desc {
+            font-size: 0.9rem;
+            color: var(--color-text-light);
+            margin-bottom: 0;
             line-height: 1.5;
         }
 
-        /* ============================================
-           TWO TRACKS
-           ============================================ */
-        .tracks-grid {
+        /* Two Tracks */
+        .tracks {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: var(--space-8);
+            gap: 1.5rem;
+            margin: 1.5rem 0;
         }
 
         .track {
-            background: var(--surface-elevated);
-            border-radius: var(--radius-2xl);
+            border-radius: 8px;
             overflow: hidden;
-            box-shadow: var(--shadow-md);
-            transition: var(--transition-base);
+            border: 1px solid var(--color-border);
         }
 
-        .track:hover {
-            box-shadow: var(--shadow-xl);
-            transform: translateY(-4px);
-        }
-
-        .track__header {
-            padding: var(--space-6) var(--space-8);
+        .track-header {
+            padding: 1rem 1.25rem;
             color: white;
         }
 
-        .track__header--cola {
+        .track-header--baseline {
             background: linear-gradient(135deg, #059669 0%, #10B981 100%);
         }
 
-        .track__header--merit {
-            background: linear-gradient(135deg, var(--color-accent) 0%, #D4A020 100%);
+        .track-header--merit {
+            background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-light) 100%);
         }
 
-        .track__title {
-            font-size: 1.375rem;
-            color: white;
-            margin-bottom: var(--space-1);
+        .track-title {
+            font-family: var(--font-sans);
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
         }
 
-        .track__subtitle {
-            font-size: 0.9375rem;
-            opacity: 0.85;
+        .track-subtitle {
+            font-size: 0.85rem;
+            opacity: 0.9;
         }
 
-        .track__body {
-            padding: var(--space-8);
+        .track-body {
+            padding: 1.25rem;
+            background: white;
         }
 
-        .track__item {
+        .track-item {
             display: flex;
-            gap: var(--space-4);
-            margin-bottom: var(--space-4);
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
         }
 
-        .track__item:last-child {
+        .track-item:last-child {
             margin-bottom: 0;
         }
 
-        .track__check {
-            width: 28px;
-            height: 28px;
-            background: var(--surface-muted);
-            border-radius: var(--radius-full);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            font-size: 0.875rem;
+        .track-check {
             color: var(--color-teal);
-        }
-
-        .track__item-text {
-            font-size: 0.9375rem;
-            line-height: 1.6;
-        }
-
-        .track__result {
-            margin-top: var(--space-6);
-            padding: var(--space-4);
-            border-radius: var(--radius-lg);
             font-weight: 600;
-            font-size: 0.875rem;
+            flex-shrink: 0;
         }
 
-        .track__result--cola {
+        .track-result {
+            margin-top: 1rem;
+            padding: 0.75rem 1rem;
+            border-radius: 6px;
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .track-result--baseline {
             background: #ECFDF5;
             color: #059669;
         }
 
-        .track__result--merit {
-            background: #FFFBEB;
-            color: var(--color-accent);
+        .track-result--merit {
+            background: #FEF3C7;
+            color: #92400E;
         }
 
-        /* ============================================
-           PATHWAYS
-           ============================================ */
-        .pathways {
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-4);
-        }
-
+        /* Pathways */
         .pathway {
-            background: var(--surface-elevated);
-            border: 1px solid var(--border-light);
-            border-radius: var(--radius-xl);
+            background: white;
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+            margin: 1rem 0;
             overflow: hidden;
-            transition: var(--transition-base);
         }
 
-        .pathway:hover {
-            border-color: var(--border-medium);
-        }
-
-        .pathway--active {
-            box-shadow: var(--shadow-lg);
-        }
-
-        .pathway__header {
+        .pathway-header {
             display: flex;
             align-items: center;
-            gap: var(--space-4);
-            padding: var(--space-5) var(--space-6);
+            gap: 1rem;
+            padding: 1rem 1.25rem;
             cursor: pointer;
-            transition: var(--transition-fast);
-            user-select: none;
+            transition: background 0.2s;
         }
 
-        .pathway__header:hover {
-            background: var(--surface-muted);
+        .pathway-header:hover {
+            background: #f8f9fa;
         }
 
-        .pathway__letter {
-            width: 52px;
-            height: 52px;
-            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
-            border-radius: var(--radius-lg);
+        .pathway-letter {
+            width: 44px;
+            height: 44px;
+            background: var(--color-navy);
+            color: white;
+            border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-family: var(--font-display);
-            font-size: 1.5rem;
+            font-family: var(--font-sans);
+            font-size: 1.25rem;
             font-weight: 700;
             flex-shrink: 0;
         }
 
-        .pathway__info {
+        .pathway-info {
             flex: 1;
         }
 
-        .pathway__title {
-            font-size: 1.0625rem;
-            margin-bottom: var(--space-1);
+        .pathway-title {
+            font-family: var(--font-sans);
+            font-weight: 600;
+            color: var(--color-navy);
+            font-size: 1rem;
         }
 
-        .pathway__subtitle {
-            font-size: 0.875rem;
-            color: var(--text-muted);
+        .pathway-subtitle {
+            font-size: 0.85rem;
+            color: var(--color-text-light);
         }
 
-        .pathway__toggle {
-            width: 36px;
-            height: 36px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-muted);
-            transition: var(--transition-base);
+        .pathway-toggle {
+            color: var(--color-text-light);
+            transition: transform 0.3s;
         }
 
-        .pathway--active .pathway__toggle {
+        .pathway.active .pathway-toggle {
             transform: rotate(180deg);
         }
 
-        .pathway__content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        .pathway-content {
+            display: none;
+            padding: 0 1.25rem 1.25rem;
+            border-top: 1px solid var(--color-border);
         }
 
-        .pathway--active .pathway__content {
-            max-height: 500px;
+        .pathway.active .pathway-content {
+            display: block;
         }
 
-        .pathway__inner {
-            padding: 0 var(--space-6) var(--space-6);
+        .pathway-standard {
+            background: linear-gradient(135deg, rgba(13, 115, 119, 0.08) 0%, rgba(13, 115, 119, 0.03) 100%);
+            border-radius: 6px;
+            padding: 1rem;
+            margin: 1rem 0;
         }
 
-        .pathway__standard {
-            background: linear-gradient(135deg, rgba(13, 148, 136, 0.08) 0%, rgba(13, 148, 136, 0.03) 100%);
-            border-radius: var(--radius-lg);
-            padding: var(--space-5);
-            margin-bottom: var(--space-5);
-        }
-
-        .pathway__standard-label {
-            font-size: 0.6875rem;
+        .pathway-standard-label {
+            font-family: var(--font-sans);
+            font-size: 0.7rem;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.08em;
             color: var(--color-teal);
-            margin-bottom: var(--space-2);
+            margin-bottom: 0.25rem;
         }
 
-        .pathway__standard-text {
-            font-size: 1.0625rem;
+        .pathway-standard-text {
+            font-family: var(--font-sans);
             font-weight: 600;
-            color: var(--text-primary);
+            color: var(--color-text);
         }
 
-        .pathway__list-title {
-            font-size: 0.875rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: var(--space-3);
-        }
-
-        .pathway__list {
+        .pathway-list {
             list-style: none;
+            margin: 0;
+            padding: 0;
         }
 
-        .pathway__list li {
+        .pathway-list li {
             display: flex;
             align-items: flex-start;
-            gap: var(--space-3);
-            font-size: 0.875rem;
-            color: var(--text-secondary);
-            margin-bottom: var(--space-2);
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--color-text-light);
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
         }
 
-        .pathway__list li::before {
+        .pathway-list li::before {
             content: '→';
             color: var(--color-teal);
-            font-weight: 600;
+            flex-shrink: 0;
         }
 
-        .pathway__note {
-            background: #FFFBEB;
-            border-radius: var(--radius-md);
-            padding: var(--space-4);
-            font-size: 0.875rem;
-            color: var(--text-primary);
-            margin-top: var(--space-4);
-        }
-
-        /* ============================================
-           COMPARISON TABLE
-           ============================================ */
+        /* Comparison Table */
         .table-wrapper {
-            background: var(--surface-elevated);
-            border-radius: var(--radius-xl);
-            overflow: hidden;
-            box-shadow: var(--shadow-md);
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+            border: 1px solid var(--color-border);
         }
 
         .table {
             width: 100%;
             border-collapse: collapse;
+            font-size: 0.9rem;
         }
 
         .table th {
-            background: var(--color-primary);
+            background: var(--color-navy);
             color: white;
-            padding: var(--space-5) var(--space-6);
-            text-align: left;
+            font-family: var(--font-sans);
             font-weight: 600;
-            font-size: 0.875rem;
+            padding: 0.875rem 1rem;
+            text-align: left;
         }
 
         .table td {
-            padding: var(--space-5) var(--space-6);
-            border-bottom: 1px solid var(--border-light);
-            font-size: 0.9375rem;
+            padding: 0.875rem 1rem;
+            border-bottom: 1px solid var(--color-border);
             vertical-align: top;
         }
 
@@ -948,1054 +476,1156 @@
             border-bottom: none;
         }
 
-        .table tr:hover td {
-            background: var(--surface-muted);
+        .table tr:nth-child(even) td {
+            background: #f8f9fa;
         }
 
         .table td:first-child {
+            font-family: var(--font-sans);
             font-weight: 600;
-            color: var(--color-primary);
+            color: var(--color-navy);
         }
 
         .table tr.highlight td {
-            background: rgba(13, 148, 136, 0.05);
+            background: rgba(13, 115, 119, 0.06);
         }
 
-        /* ============================================
-           EXAMPLES
-           ============================================ */
-        .examples-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: var(--space-6);
-        }
-
+        /* Examples */
         .example {
-            background: var(--surface-elevated);
-            border-radius: var(--radius-xl);
+            background: white;
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+            margin: 1rem 0;
             overflow: hidden;
-            box-shadow: var(--shadow-md);
-            transition: var(--transition-base);
         }
 
-        .example:hover {
-            box-shadow: var(--shadow-xl);
-            transform: translateY(-4px);
-        }
-
-        .example__header {
-            padding: var(--space-5) var(--space-6);
+        .example-header {
+            padding: 0.875rem 1.25rem;
             display: flex;
             align-items: center;
-            gap: var(--space-3);
+            gap: 0.75rem;
             color: white;
         }
 
-        .example__header--4 {
+        .example-header--4 {
             background: linear-gradient(135deg, #3B82F6 0%, #60A5FA 100%);
         }
 
-        .example__header--5 {
-            background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
+        .example-header--5 {
+            background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-light) 100%);
         }
 
-        .example__rating {
-            font-family: var(--font-display);
-            font-size: 2rem;
+        .example-rating {
+            font-family: var(--font-sans);
+            font-size: 1.75rem;
             font-weight: 700;
         }
 
-        .example__label {
-            font-size: 1rem;
+        .example-label {
+            font-family: var(--font-sans);
             font-weight: 600;
         }
 
-        .example__body {
-            padding: var(--space-6);
+        .example-body {
+            padding: 1.25rem;
         }
 
-        .example__goal {
-            background: var(--surface-muted);
+        .example-goal {
+            background: #f8f9fa;
             border-left: 3px solid var(--color-teal);
-            border-radius: 0 var(--radius-md) var(--radius-md) 0;
-            padding: var(--space-4);
-            font-size: 0.9375rem;
+            padding: 1rem;
+            margin-bottom: 1rem;
             font-style: italic;
-            color: var(--text-primary);
-            line-height: 1.6;
-            margin-bottom: var(--space-4);
+            border-radius: 0 6px 6px 0;
         }
 
-        .example__why {
-            font-size: 0.875rem;
-            color: var(--text-secondary);
+        .example-why {
+            font-size: 0.9rem;
+            color: var(--color-text-light);
+            margin-bottom: 0;
         }
 
-        .example__why strong {
-            color: var(--text-primary);
-        }
-
-        /* ============================================
-           TIMELINE
-           ============================================ */
+        /* Timeline */
         .timeline {
             position: relative;
-            padding-left: var(--space-10);
+            margin: 1.5rem 0;
+            padding-left: 2rem;
         }
 
         .timeline::before {
             content: '';
             position: absolute;
-            left: 15px;
-            top: 0;
-            bottom: 0;
+            left: 7px;
+            top: 4px;
+            bottom: 4px;
             width: 2px;
-            background: linear-gradient(to bottom, var(--color-teal), var(--color-accent));
-            border-radius: var(--radius-full);
+            background: linear-gradient(to bottom, var(--color-teal), var(--color-gold));
+            border-radius: 2px;
         }
 
-        .timeline__item {
+        .timeline-item {
             position: relative;
-            padding-bottom: var(--space-8);
+            padding-bottom: 1.5rem;
         }
 
-        .timeline__item:last-child {
+        .timeline-item:last-child {
             padding-bottom: 0;
         }
 
-        .timeline__dot {
+        .timeline-dot {
             position: absolute;
-            left: calc(-1 * var(--space-10) + 8px);
+            left: -2rem;
             top: 4px;
             width: 16px;
             height: 16px;
             background: var(--color-teal);
-            border-radius: var(--radius-full);
-            border: 3px solid var(--surface-base);
-            box-shadow: 0 0 0 4px rgba(13, 148, 136, 0.2);
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px rgba(13, 115, 119, 0.2);
         }
 
-        .timeline__date {
-            font-size: 0.8125rem;
+        .timeline-date {
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
             font-weight: 600;
             color: var(--color-teal);
-            margin-bottom: var(--space-2);
+            margin-bottom: 0.25rem;
         }
 
-        .timeline__title {
-            font-size: 1.0625rem;
-            color: var(--text-primary);
-            margin-bottom: var(--space-1);
+        .timeline-title {
+            font-family: var(--font-sans);
+            font-weight: 600;
+            color: var(--color-text);
+            margin-bottom: 0.25rem;
         }
 
-        .timeline__desc {
-            font-size: 0.9375rem;
-            color: var(--text-secondary);
+        .timeline-desc {
+            font-size: 0.9rem;
+            color: var(--color-text-light);
+            margin-bottom: 0;
         }
 
-        /* ============================================
-           KEY MESSAGES
-           ============================================ */
+        /* Key Messages */
+        .messages {
+            background: var(--color-navy);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .messages h3 {
+            color: white;
+            margin-top: 0;
+            margin-bottom: 1.25rem;
+        }
+
         .messages-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: var(--space-5);
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
         }
 
         .message {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: var(--radius-lg);
-            padding: var(--space-6);
-            transition: var(--transition-base);
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 6px;
+            padding: 1rem;
         }
 
-        .message:hover {
-            background: rgba(255, 255, 255, 0.06);
-            border-color: rgba(255, 255, 255, 0.15);
-            transform: translateX(4px);
-        }
-
-        .message__title {
-            font-size: 1rem;
+        .message-title {
+            font-family: var(--font-sans);
             font-weight: 600;
-            color: white;
-            margin-bottom: var(--space-2);
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
             display: flex;
             align-items: center;
-            gap: var(--space-2);
+            gap: 0.5rem;
         }
 
-        .message__title::before {
+        .message-title::before {
             content: '✓';
-            color: var(--color-accent);
+            color: var(--color-gold-light);
         }
 
-        .message__text {
-            font-size: 0.9375rem;
-            color: rgba(255, 255, 255, 0.6);
-            line-height: 1.6;
+        .message-text {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            margin-bottom: 0;
+            line-height: 1.5;
         }
 
-        /* ============================================
-           BACK TO TOP
-           ============================================ */
-        .back-to-top {
-            position: fixed;
-            bottom: var(--space-8);
-            right: var(--space-8);
-            width: 52px;
-            height: 52px;
-            background: var(--color-primary);
-            color: white;
-            border-radius: var(--radius-full);
+        /* Downloads */
+        .downloads {
+            background: #f8f9fa;
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .downloads h3 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+
+        .downloads-links {
             display: flex;
-            align-items: center;
             justify-content: center;
-            box-shadow: var(--shadow-lg);
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(20px);
-            transition: var(--transition-base);
-            z-index: 900;
+            gap: 2rem;
+            flex-wrap: wrap;
         }
 
-        .back-to-top--visible {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
+        .downloads-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--color-navy);
+            text-decoration: none;
+            font-family: var(--font-sans);
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 0.75rem 1.25rem;
+            background: white;
+            border: 1px solid var(--color-border);
+            border-radius: 6px;
+            transition: all 0.2s;
         }
 
-        .back-to-top:hover {
-            background: var(--color-secondary);
-            transform: translateY(-4px);
-        }
-
-        /* ============================================
-           FOOTER
-           ============================================ */
-        .footer {
-            background: var(--color-primary);
+        .downloads-link:hover {
+            border-color: var(--color-navy);
+            background: var(--color-navy);
             color: white;
-            padding: var(--space-12) 0;
         }
 
-        .footer__inner {
+        /* Footer */
+        .footer {
+            background: var(--color-navy);
+            color: white;
+            padding: 2rem;
+        }
+
+        .footer-inner {
+            max-width: 800px;
+            margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: var(--space-6);
+            gap: 1rem;
         }
 
-        .footer__brand {
+        .footer-brand {
             display: flex;
             align-items: center;
-            gap: var(--space-4);
+            gap: 1rem;
         }
 
-        .footer__logo {
-            width: 52px;
-            height: 52px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: var(--radius-lg);
+        .footer-logo {
+            width: 48px;
+            height: 48px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
+            font-family: var(--font-sans);
             font-weight: 700;
-            font-size: 0.875rem;
+            font-size: 0.85rem;
         }
 
-        .footer__title {
-            font-family: var(--font-display);
-            font-size: 1.125rem;
+        .footer-title {
+            font-family: var(--font-sans);
+            font-weight: 600;
         }
 
-        .footer__subtitle {
-            font-size: 0.875rem;
-            opacity: 0.6;
-        }
-
-        .footer__info {
-            text-align: right;
-            font-size: 0.875rem;
+        .footer-subtitle {
+            font-size: 0.85rem;
             opacity: 0.7;
         }
 
-        /* ============================================
-           RESPONSIVE
-           ============================================ */
-        @media (max-width: 1024px) {
-            .nav__links {
-                display: none;
+        .footer-info {
+            text-align: right;
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+
+        .footer-link {
+            color: var(--color-gold-light);
+            text-decoration: none;
+        }
+
+        .footer-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive - Tablet */
+        @media (max-width: 900px) {
+            .header-nav {
+                gap: 1rem;
             }
 
-            .nav__toggle {
-                display: flex;
+            .header-nav a {
+                font-size: 0.8rem;
             }
 
-            .mobile-nav {
-                display: block;
+            .principles-grid {
+                gap: 0.75rem;
             }
 
-            .smart-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-
-            .tracks-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .examples-grid {
-                grid-template-columns: 1fr;
+            .tracks {
+                gap: 1rem;
             }
         }
 
+        /* Responsive - Mobile Landscape / Small Tablet */
         @media (max-width: 768px) {
-            .hero__stats {
+            .header {
                 flex-direction: column;
-                gap: var(--space-6);
+                gap: 1rem;
+                text-align: center;
+                padding: 1rem;
             }
 
-            .smart-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .header-nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.5rem;
             }
 
-            .table-wrapper {
-                overflow-x: auto;
+            .header-nav a {
+                padding: 0.5rem 0.75rem;
+                background: rgba(255,255,255,0.1);
+                border-radius: 4px;
             }
 
-            .table {
-                min-width: 600px;
+            .hero {
+                padding: 3rem 1.5rem;
             }
 
-            .footer__inner {
+            .hero h1 {
+                font-size: 1.85rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .hero-stats {
                 flex-direction: column;
-                text-align: center;
+                gap: 1.25rem;
+                margin-top: 2rem;
+                padding-top: 1.5rem;
             }
 
-            .footer__info {
-                text-align: center;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .section {
-                padding: var(--space-16) 0;
-            }
-
-            .card-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .smart-grid {
-                gap: var(--space-3);
-            }
-
-            .smart-item {
-                padding: var(--space-4);
-            }
-
-            .smart-item__letter {
+            .hero-stat-value {
                 font-size: 2rem;
             }
 
-            .back-to-top {
-                bottom: var(--space-4);
-                right: var(--space-4);
-                width: 44px;
-                height: 44px;
+            article {
+                padding: 2rem 1.25rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+                margin-top: 2.5rem;
+            }
+
+            .intro-box {
+                padding: 1.25rem;
+            }
+
+            .intro-box p {
+                font-size: 1rem;
+            }
+
+            .principles-grid,
+            .tracks,
+            .messages-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .principle {
+                padding: 1rem;
+            }
+
+            .track-header {
+                padding: 0.875rem 1rem;
+            }
+
+            .track-body {
+                padding: 1rem;
+            }
+
+            .pathway-header {
+                padding: 0.875rem 1rem;
+            }
+
+            .pathway-letter {
+                width: 40px;
+                height: 40px;
+                font-size: 1.1rem;
+            }
+
+            .pathway-title {
+                font-size: 0.95rem;
+            }
+
+            .pathway-content {
+                padding: 0 1rem 1rem;
+            }
+
+            /* Table scroll on mobile */
+            .table-wrapper {
+                margin-left: -1.25rem;
+                margin-right: -1.25rem;
+                border-radius: 0;
+                border-left: none;
+                border-right: none;
+            }
+
+            .table {
+                font-size: 0.8rem;
+                min-width: 580px;
+            }
+
+            .table th,
+            .table td {
+                padding: 0.75rem;
+            }
+
+            .example-header {
+                padding: 0.75rem 1rem;
+            }
+
+            .example-rating {
+                font-size: 1.5rem;
+            }
+
+            .example-body {
+                padding: 1rem;
+            }
+
+            .timeline {
+                padding-left: 1.75rem;
+            }
+
+            .timeline-dot {
+                left: -1.75rem;
+                width: 14px;
+                height: 14px;
+            }
+
+            .messages {
+                padding: 1.5rem;
+                margin: 1.5rem 0;
+            }
+
+            .message {
+                padding: 0.875rem;
+            }
+
+            .downloads {
+                padding: 1.25rem;
+            }
+
+            .downloads-links {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+
+            .downloads-link {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .footer {
+                padding: 1.5rem;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-info {
+                text-align: center;
+            }
+        }
+
+        /* Responsive - Mobile Portrait */
+        @media (max-width: 480px) {
+            body {
+                font-size: 16px;
+            }
+
+            .header {
+                padding: 0.875rem;
+            }
+
+            .header-logo {
+                width: 40px;
+                height: 40px;
+                font-size: 0.75rem;
+            }
+
+            .header-title {
+                font-size: 1rem;
+            }
+
+            .header-nav a {
+                font-size: 0.75rem;
+                padding: 0.4rem 0.6rem;
+            }
+
+            .hero {
+                padding: 2.5rem 1rem;
+            }
+
+            .hero-badge {
+                font-size: 0.75rem;
+                padding: 0.35rem 0.875rem;
+            }
+
+            .hero h1 {
+                font-size: 1.5rem;
+                line-height: 1.25;
+            }
+
+            .hero .subtitle {
+                font-size: 1rem;
+            }
+
+            .hero-stats {
+                gap: 1rem;
+            }
+
+            .hero-stat-value {
+                font-size: 1.75rem;
+            }
+
+            .hero-stat-label {
+                font-size: 0.8rem;
+            }
+
+            article {
+                padding: 1.5rem 1rem;
+            }
+
+            h2 {
+                font-size: 1.25rem;
+                margin-top: 2rem;
+            }
+
+            h3 {
+                font-size: 1.05rem;
+            }
+
+            .intro-box {
+                padding: 1rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .principle {
+                padding: 0.875rem;
+            }
+
+            .principle-name {
+                font-size: 0.9rem;
+            }
+
+            .principle-desc {
+                font-size: 0.85rem;
+            }
+
+            .track-title {
+                font-size: 1rem;
+            }
+
+            .track-subtitle {
+                font-size: 0.8rem;
+            }
+
+            .track-item {
+                font-size: 0.9rem;
+                gap: 0.5rem;
+            }
+
+            .track-result {
+                font-size: 0.85rem;
+                padding: 0.625rem 0.875rem;
+            }
+
+            .pathway-header {
+                gap: 0.75rem;
+            }
+
+            .pathway-letter {
+                width: 36px;
+                height: 36px;
+                font-size: 1rem;
+            }
+
+            .pathway-subtitle {
+                font-size: 0.8rem;
+            }
+
+            .pathway-standard {
+                padding: 0.875rem;
+            }
+
+            .pathway-standard-text {
+                font-size: 0.95rem;
+            }
+
+            .pathway-list li {
+                font-size: 0.85rem;
+            }
+
+            .table {
+                font-size: 0.75rem;
+                min-width: 500px;
+            }
+
+            .table th,
+            .table td {
+                padding: 0.625rem 0.5rem;
+            }
+
+            .example-label {
+                font-size: 0.9rem;
+            }
+
+            .example-goal {
+                padding: 0.875rem;
+                font-size: 0.9rem;
+            }
+
+            .example-why {
+                font-size: 0.85rem;
+            }
+
+            .timeline-date {
+                font-size: 0.75rem;
+            }
+
+            .timeline-title {
+                font-size: 0.95rem;
+            }
+
+            .timeline-desc {
+                font-size: 0.85rem;
+            }
+
+            .messages h3 {
+                font-size: 1.1rem;
+            }
+
+            .message-title {
+                font-size: 0.9rem;
+            }
+
+            .message-text {
+                font-size: 0.8rem;
+            }
+
+            .downloads h3 {
+                font-size: 1.1rem;
+            }
+
+            .downloads-link {
+                font-size: 0.9rem;
+                padding: 0.625rem 1rem;
+            }
+
+            .footer-logo {
+                width: 40px;
+                height: 40px;
+                font-size: 0.75rem;
+            }
+
+            .footer-title {
+                font-size: 0.95rem;
+            }
+
+            .footer-subtitle,
+            .footer-info {
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Touch-friendly targets */
+        @media (hover: none) and (pointer: coarse) {
+            .header-nav a,
+            .pathway-header,
+            .downloads-link {
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        /* Reduced motion preference */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                transition: none !important;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            .header,
+            .footer,
+            .downloads {
+                display: none;
+            }
+
+            .hero {
+                background: white;
+                color: black;
+                padding: 1rem 0;
+            }
+
+            .hero h1,
+            .hero .subtitle {
+                color: black;
+            }
+
+            .hero-stats {
+                border-top-color: #ccc;
+            }
+
+            .hero-stat-value {
+                color: black;
+            }
+
+            article {
+                padding: 0;
+                max-width: none;
+            }
+
+            .pathway-content {
+                display: block !important;
+            }
+
+            .messages {
+                background: white;
+                color: black;
+                border: 1px solid #ccc;
+            }
+
+            .messages h3,
+            .message-title {
+                color: black;
+            }
+
+            .message {
+                border-color: #ccc;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Progress Bar -->
-    <div class="progress" id="progress"></div>
-
-    <!-- Navigation -->
-    <nav class="nav" id="nav">
-        <div class="container">
-            <div class="nav__inner">
-                <a href="#" class="nav__brand">
-                    <div class="nav__logo">ISOM</div>
-                    <div>
-                        <div class="nav__title">ISOM Department</div>
-                        <div class="nav__subtitle">Sawyer Business School</div>
-                    </div>
-                </a>
-                <ul class="nav__links">
-                    <li><a href="#overview" class="nav__link">Overview</a></li>
-                    <li><a href="#smart" class="nav__link">SMART Goals</a></li>
-                    <li><a href="#tracks" class="nav__link">Two Tracks</a></li>
-                    <li><a href="#pathways" class="nav__link">Pathways</a></li>
-                    <li><a href="#comparison" class="nav__link">Comparison</a></li>
-                    <li><a href="#examples" class="nav__link">Examples</a></li>
-                    <li><a href="#timeline" class="nav__link">Timeline</a></li>
-                </ul>
-                <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M3 12h18M3 6h18M3 18h18"/>
-                    </svg>
-                </button>
+    <header class="header">
+        <div class="header-brand">
+            <div class="header-logo">ISOM</div>
+            <div class="header-text">
+                <div class="header-title">ISOM Department</div>
+                <div class="header-subtitle">Sawyer Business School</div>
             </div>
         </div>
-    </nav>
+        <nav class="header-nav">
+            <a href="#overview">Overview</a>
+            <a href="#tracks">Two Tracks</a>
+            <a href="#pathways">Pathways</a>
+            <a href="#comparison">Comparison</a>
+            <a href="#examples">Examples</a>
+            <a href="#timeline">Timeline</a>
+        </nav>
+    </header>
 
-    <!-- Mobile Navigation -->
-    <div class="mobile-nav" id="mobileNav">
-        <button class="mobile-nav__close" id="mobileNavClose" aria-label="Close menu">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M18 6L6 18M6 6l12 12"/>
-            </svg>
-        </button>
-        <ul class="mobile-nav__links">
-            <li><a href="#overview" class="mobile-nav__link">Overview</a></li>
-            <li><a href="#smart" class="mobile-nav__link">SMART Goals</a></li>
-            <li><a href="#tracks" class="mobile-nav__link">Two Tracks</a></li>
-            <li><a href="#pathways" class="mobile-nav__link">Pathways</a></li>
-            <li><a href="#comparison" class="mobile-nav__link">Comparison</a></li>
-            <li><a href="#examples" class="mobile-nav__link">Examples</a></li>
-            <li><a href="#timeline" class="mobile-nav__link">Timeline</a></li>
-        </ul>
-    </div>
-
-    <!-- Hero -->
     <section class="hero">
-        <div class="hero__bg">
-            <div class="hero__bg-grid"></div>
-            <div class="hero__bg-gradient"></div>
-        </div>
-        <div class="hero__content">
-            <div class="hero__badge">
-                <span class="hero__badge-dot"></span>
-                AY 2025-26 Pilot Year
+        <div class="hero-badge">AY 2025-26 Pilot Year</div>
+        <h1>Faculty Performance Standards</h1>
+        <p class="subtitle">"Meets Expectations" Criteria & SMART Goals Framework</p>
+        <div class="hero-stats">
+            <div class="hero-stat">
+                <div class="hero-stat-value">3</div>
+                <div class="hero-stat-label">Evaluation Areas</div>
             </div>
-            <h1 class="hero__title">Faculty Performance Standards</h1>
-            <p class="hero__subtitle">"Meets Expectations" Criteria & SMART Goals Framework</p>
-            <a href="#overview" class="hero__cta">
-                Explore the Framework
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <path d="M12 5v14M5 12l7 7 7-7"/>
-                </svg>
-            </a>
-            <div class="hero__stats">
-                <div class="hero__stat">
-                    <div class="hero__stat-value">3</div>
-                    <div class="hero__stat-label">Evaluation Areas</div>
-                </div>
-                <div class="hero__stat">
-                    <div class="hero__stat-value">3</div>
-                    <div class="hero__stat-label">Scholarship Pathways</div>
-                </div>
-                <div class="hero__stat">
-                    <div class="hero__stat-value">2-3</div>
-                    <div class="hero__stat-label">Year Assessment Window</div>
-                </div>
+            <div class="hero-stat">
+                <div class="hero-stat-value">3</div>
+                <div class="hero-stat-label">Scholarship Pathways</div>
             </div>
-        </div>
-        <div class="hero__scroll">
-            <span>Scroll</span>
-            <div class="hero__scroll-line"></div>
+            <div class="hero-stat">
+                <div class="hero-stat-value">2–3</div>
+                <div class="hero-stat-label">Year Assessment Window</div>
+            </div>
         </div>
     </section>
 
-    <main>
-        <!-- Overview Section -->
-        <section class="section" id="overview">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-header__label">Framework Overview</span>
-                    <h2 class="section-header__title">A Clear, Equitable Approach</h2>
-                    <p class="section-header__desc">ISOM's framework balances clarity with flexibility, aligned with AACSB standards and consistent with other SBS departments.</p>
-                </div>
+    <article>
+        <div class="intro-box">
+            <p><strong>From ISOM:</strong> When SBS asked departments to define "meets expectations" criteria, we saw an opportunity—not just to comply, but to build something useful for our faculty and potentially helpful to colleagues across the school.</p>
+            <p>This framework reflects ISOM's commitment to clarity, equity, and supporting our faculty's diverse contributions. We share it openly in the spirit of collaboration.</p>
+        </div>
 
-                <div class="card-grid">
-                    <div class="card">
-                        <div class="card__icon">📋</div>
-                        <h3 class="card__title">AACSB-Aligned</h3>
-                        <p class="card__text">Criteria reflect AACSB standards for faculty qualification and intellectual contributions across all appointment types.</p>
+        <h2 id="overview">Guiding Principles</h2>
+        
+        <p>We built this framework on six principles that balance accountability with flexibility:</p>
+
+        <div class="principles-grid">
+            <div class="principle">
+                <div class="principle-name">AACSB-Aligned</div>
+                <p class="principle-desc">Criteria reflect AACSB standards for faculty qualification and intellectual contributions.</p>
+            </div>
+            <div class="principle">
+                <div class="principle-name">Role-Appropriate</div>
+                <p class="principle-desc">Expectations vary by appointment type (SA vs. PA qualification).</p>
+            </div>
+            <div class="principle">
+                <div class="principle-name">Context-Sensitive</div>
+                <p class="principle-desc">Evaluation considers individual circumstances while maintaining consistent standards.</p>
+            </div>
+            <div class="principle">
+                <div class="principle-name">Multi-Year Perspective</div>
+                <p class="principle-desc">Scholarly productivity assessed over 2-3 year trajectory, not as an annual checklist.</p>
+            </div>
+            <div class="principle">
+                <div class="principle-name">Equity Across SBS</div>
+                <p class="principle-desc">Standards consistent with other departments, using Marketing's benchmark.</p>
+            </div>
+            <div class="principle">
+                <div class="principle-name">Clear Distinction</div>
+                <p class="principle-desc">Baseline performance is distinguishable from merit-worthy exceptional achievement.</p>
+            </div>
+        </div>
+
+        <h2 id="tracks">The Two-Track System</h2>
+        
+        <p>Understanding the distinction between baseline expectations (COLA) and merit-worthy performance (SMART goals) is essential.</p>
+
+        <div class="tracks">
+            <div class="track">
+                <div class="track-header track-header--baseline">
+                    <div class="track-title">Track 1: Baseline</div>
+                    <div class="track-subtitle">Meeting expectations in all three areas</div>
+                </div>
+                <div class="track-body">
+                    <div class="track-item">
+                        <span class="track-check">✓</span>
+                        <span><strong>Teaching:</strong> Consistently effective instruction with professional development</span>
                     </div>
-                    <div class="card">
-                        <div class="card__icon">⚖️</div>
-                        <h3 class="card__title">Equity Across SBS</h3>
-                        <p class="card__text">Standards consistent with other departments—using Marketing's productivity benchmark while adding pathway diversity.</p>
+                    <div class="track-item">
+                        <span class="track-check">✓</span>
+                        <span><strong>Scholarship:</strong> 1-2 outputs over 2-3 years</span>
                     </div>
-                    <div class="card">
-                        <div class="card__icon">🎯</div>
-                        <h3 class="card__title">Clear Distinction</h3>
-                        <p class="card__text">Baseline performance (COLA eligibility) is clearly distinguishable from merit-worthy exceptional achievement.</p>
+                    <div class="track-item">
+                        <span class="track-check">✓</span>
+                        <span><strong>Service:</strong> Active participation in committees and department activities</span>
                     </div>
-                    <div class="card">
-                        <div class="card__icon">📊</div>
-                        <h3 class="card__title">Multi-Year Perspective</h3>
-                        <p class="card__text">Scholarly productivity assessed over 2-3 year trajectory, not as an annual checklist—accommodating research cycles.</p>
-                    </div>
-                    <div class="card">
-                        <div class="card__icon">🔄</div>
-                        <h3 class="card__title">Context-Sensitive</h3>
-                        <p class="card__text">Evaluation considers individual circumstances while maintaining consistent standards across the department.</p>
-                    </div>
-                    <div class="card">
-                        <div class="card__icon">🛤️</div>
-                        <h3 class="card__title">Multiple Pathways</h3>
-                        <p class="card__text">Three distinct pathways honor diverse contributions: traditional research, teaching scholarship, and practice engagement.</p>
-                    </div>
+                    <div class="track-result track-result--baseline">→ Qualifies for COLA increase</div>
                 </div>
             </div>
-        </section>
 
-        <!-- SMART Goals Section -->
-        <section class="section section--dark" id="smart">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-header__label">Understanding SMART Goals</span>
-                    <h2 class="section-header__title">What Makes a Goal "SMART"?</h2>
-                    <p class="section-header__desc">SMART goals provide a framework for setting clear, achievable objectives that can be meaningfully evaluated.</p>
+            <div class="track">
+                <div class="track-header track-header--merit">
+                    <div class="track-title">Track 2: Merit</div>
+                    <div class="track-subtitle">Exceptional achievement beyond baseline</div>
                 </div>
-
-                <div class="smart-grid">
-                    <div class="smart-item">
-                        <div class="smart-item__letter">S</div>
-                        <div class="smart-item__word">Specific</div>
-                        <div class="smart-item__desc">Clear and well-defined objectives, not vague aspirations</div>
+                <div class="track-body">
+                    <div class="track-item">
+                        <span class="track-check">★</span>
+                        <span><strong>Set ambitious SMART goal(s)</strong> aligned with department objectives</span>
                     </div>
-                    <div class="smart-item">
-                        <div class="smart-item__letter">M</div>
-                        <div class="smart-item__word">Measurable</div>
-                        <div class="smart-item__desc">Quantifiable outcomes that can be tracked and verified</div>
+                    <div class="track-item">
+                        <span class="track-check">★</span>
+                        <span><strong>Pre-negotiate rating</strong> with Chair (4 or 5)</span>
                     </div>
-                    <div class="smart-item">
-                        <div class="smart-item__letter">A</div>
-                        <div class="smart-item__word">Achievable</div>
-                        <div class="smart-item__desc">Realistic given available resources and constraints</div>
+                    <div class="track-item">
+                        <span class="track-check">★</span>
+                        <span><strong>Achieve the goal</strong> by end of academic year</span>
                     </div>
-                    <div class="smart-item">
-                        <div class="smart-item__letter">R</div>
-                        <div class="smart-item__word">Relevant</div>
-                        <div class="smart-item__desc">Aligned with department goals and institutional priorities</div>
-                    </div>
-                    <div class="smart-item">
-                        <div class="smart-item__letter">T</div>
-                        <div class="smart-item__word">Time-bound</div>
-                        <div class="smart-item__desc">Clear deadline for completion (typically end of AY)</div>
-                    </div>
+                    <div class="track-result track-result--merit">→ Qualifies for merit increase (Rating 4 or 5)</div>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <!-- Two Tracks Section -->
-        <section class="section" id="tracks">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-header__label">Evaluation Structure</span>
-                    <h2 class="section-header__title">The Two-Track System</h2>
-                    <p class="section-header__desc">Understanding the distinction between baseline expectations (COLA) and merit-worthy performance (SMART goals).</p>
+        <h2 id="pathways">Three Scholarship Pathways</h2>
+        
+        <p>ISOM recognizes that faculty contribute in different ways. We've established three distinct pathways for demonstrating scholarly engagement—choose the one that fits your work.</p>
+
+        <div class="pathway" id="pathway-a">
+            <div class="pathway-header" onclick="togglePathway('pathway-a')">
+                <div class="pathway-letter">A</div>
+                <div class="pathway-info">
+                    <div class="pathway-title">Scholarly Academic (Research)</div>
+                    <div class="pathway-subtitle">Traditional disciplinary research for SA-qualified faculty</div>
                 </div>
+                <div class="pathway-toggle">▼</div>
+            </div>
+            <div class="pathway-content">
+                <div class="pathway-standard">
+                    <div class="pathway-standard-label">Multi-Year Expectation</div>
+                    <div class="pathway-standard-text">1-2 scholarly outputs over a 2-3 year period</div>
+                </div>
+                <p style="font-size: 0.9rem; color: var(--color-text-light); margin-bottom: 0.75rem;"><strong>Qualifying outputs include:</strong></p>
+                <ul class="pathway-list">
+                    <li>Conference presentations or workshop participation</li>
+                    <li>Working papers or manuscripts in development</li>
+                    <li>Publications (accepted, in press, or published)</li>
+                    <li>Grant proposals submitted or ongoing</li>
+                    <li>Research collaborations with tangible products</li>
+                </ul>
+            </div>
+        </div>
 
-                <div class="tracks-grid">
-                    <div class="track">
-                        <div class="track__header track__header--cola">
-                            <h3 class="track__title">Track 1: Baseline (COLA)</h3>
-                            <p class="track__subtitle">Meeting expectations in all three areas</p>
-                        </div>
-                        <div class="track__body">
-                            <div class="track__item">
-                                <div class="track__check">✓</div>
-                                <p class="track__item-text"><strong>Teaching:</strong> Consistently effective instruction with professional development</p>
-                            </div>
-                            <div class="track__item">
-                                <div class="track__check">✓</div>
-                                <p class="track__item-text"><strong>Scholarship:</strong> 1-2 outputs over 2-3 years (conferences, papers, publications)</p>
-                            </div>
-                            <div class="track__item">
-                                <div class="track__check">✓</div>
-                                <p class="track__item-text"><strong>Service:</strong> Active participation in committees and department activities</p>
-                            </div>
-                            <div class="track__result track__result--cola">
-                                → Qualifies for COLA increase (when available)
-                            </div>
-                        </div>
-                    </div>
+        <div class="pathway" id="pathway-b">
+            <div class="pathway-header" onclick="togglePathway('pathway-b')">
+                <div class="pathway-letter">B</div>
+                <div class="pathway-info">
+                    <div class="pathway-title">Scholarly Academic (Teaching Scholarship)</div>
+                    <div class="pathway-subtitle">Scholarship of teaching and learning for SA-qualified faculty</div>
+                </div>
+                <div class="pathway-toggle">▼</div>
+            </div>
+            <div class="pathway-content">
+                <div class="pathway-standard">
+                    <div class="pathway-standard-label">Multi-Year Expectation</div>
+                    <div class="pathway-standard-text">1-2 scholarly outputs in teaching scholarship over 2-3 years</div>
+                </div>
+                <p style="font-size: 0.9rem; color: var(--color-text-light); margin-bottom: 0.75rem;"><strong>Qualifying outputs include:</strong></p>
+                <ul class="pathway-list">
+                    <li>Presentations at teaching-focused conferences (AACSB, AIS)</li>
+                    <li>Publications in teaching journals or pedagogical outlets</li>
+                    <li>Educational grant proposals or funded projects</li>
+                    <li>Curriculum innovation with systematic assessment</li>
+                    <li>Publications in venues like AACSB Insights, DSJIE</li>
+                </ul>
+                <p style="font-size: 0.85rem; color: var(--color-text-light); background: #FEF3C7; padding: 0.75rem; border-radius: 6px; margin-top: 1rem; margin-bottom: 0;"><strong>Note:</strong> Teaching scholarship requires systematic inquiry and dissemination—beyond simply excellent teaching.</p>
+            </div>
+        </div>
 
-                    <div class="track">
-                        <div class="track__header track__header--merit">
-                            <h3 class="track__title">Track 2: Merit (SMART Goals)</h3>
-                            <p class="track__subtitle">Exceptional achievement beyond baseline</p>
-                        </div>
-                        <div class="track__body">
-                            <div class="track__item">
-                                <div class="track__check">★</div>
-                                <p class="track__item-text"><strong>Set ambitious SMART goal(s)</strong> aligned with department objectives</p>
-                            </div>
-                            <div class="track__item">
-                                <div class="track__check">★</div>
-                                <p class="track__item-text"><strong>Pre-negotiate rating</strong> with Chair (determines if goal warrants 4 or 5)</p>
-                            </div>
-                            <div class="track__item">
-                                <div class="track__check">★</div>
-                                <p class="track__item-text"><strong>Achieve the goal</strong> by end of academic year</p>
-                            </div>
-                            <div class="track__result track__result--merit">
-                                → Qualifies for merit increase (Rating 4 or 5)
-                            </div>
-                        </div>
-                    </div>
+        <div class="pathway" id="pathway-c">
+            <div class="pathway-header" onclick="togglePathway('pathway-c')">
+                <div class="pathway-letter">C</div>
+                <div class="pathway-info">
+                    <div class="pathway-title">Practice Academic</div>
+                    <div class="pathway-subtitle">Professional engagement for PA-qualified faculty</div>
+                </div>
+                <div class="pathway-toggle">▼</div>
+            </div>
+            <div class="pathway-content">
+                <div class="pathway-standard">
+                    <div class="pathway-standard-label">Ongoing Expectation</div>
+                    <div class="pathway-standard-text">~7-10 hours/week of discipline-relevant professional activity</div>
+                </div>
+                <p style="font-size: 0.9rem; color: var(--color-text-light); margin-bottom: 0.75rem;"><strong>Qualifying activities include:</strong></p>
+                <ul class="pathway-list">
+                    <li>Professional consulting or advisory work</li>
+                    <li>Industry collaboration and applied projects</li>
+                    <li>Professional certification maintenance</li>
+                    <li>Active practice in professional domain</li>
+                    <li>Executive education development</li>
+                    <li>Professional association leadership</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2 id="comparison">How ISOM Compares</h2>
+        
+        <p>Our framework balances the clarity of Marketing's quantitative approach with the flexibility of DPSHA's qualitative model.</p>
+
+        <div class="table-wrapper">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Aspect</th>
+                        <th>Marketing</th>
+                        <th>DPSHA</th>
+                        <th>ISOM</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Research Standard</td>
+                        <td>1 R&R/acceptance OR 2 presentations over 2-3 years</td>
+                        <td>"Sustained program" with various pathways</td>
+                        <td>1-2 outputs over 2-3 years</td>
+                    </tr>
+                    <tr>
+                        <td>Specificity</td>
+                        <td>Highly quantitative</td>
+                        <td>Highly qualitative</td>
+                        <td>Clear targets + contextual flexibility</td>
+                    </tr>
+                    <tr class="highlight">
+                        <td>Pathway Diversity</td>
+                        <td>Single standard</td>
+                        <td>Multiple combinations</td>
+                        <td>Three distinct pathways</td>
+                    </tr>
+                    <tr>
+                        <td>Philosophy</td>
+                        <td>Measurable metrics</td>
+                        <td>Holistic judgment</td>
+                        <td>Clear expectations + context</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 id="examples">Sample SMART Goals</h2>
+        
+        <p>What does merit-worthy performance look like? Here are examples that clearly exceed baseline expectations:</p>
+
+        <div class="example">
+            <div class="example-header example-header--4">
+                <div class="example-rating">4</div>
+                <div class="example-label">Exceeds Expectations</div>
+            </div>
+            <div class="example-body">
+                <div class="example-goal">"Publish 2 peer-reviewed articles and present at 2 national conferences by May 2026"</div>
+                <p class="example-why"><strong>Why it works:</strong> Substantially exceeds the 1-2 output baseline, with multiple high-impact deliverables.</p>
+            </div>
+        </div>
+
+        <div class="example">
+            <div class="example-header example-header--5">
+                <div class="example-rating">5</div>
+                <div class="example-label">Far Exceeds Expectations</div>
+            </div>
+            <div class="example-body">
+                <div class="example-goal">"Secure external grant funding ($50K+), publish in top-tier journal, and present at 2 national conferences by May 2026"</div>
+                <p class="example-why"><strong>Why it works:</strong> Major external funding + top publication + multiple presentations = transformative achievement.</p>
+            </div>
+        </div>
+
+        <div class="example">
+            <div class="example-header example-header--4">
+                <div class="example-rating">4</div>
+                <div class="example-label">Exceeds Expectations (Teaching Scholarship)</div>
+            </div>
+            <div class="example-body">
+                <div class="example-goal">"Develop new experiential learning module across 3 courses with assessed student outcomes, present findings at AACSB conference by May 2026"</div>
+                <p class="example-why"><strong>Why it works:</strong> Significant curriculum innovation with systematic assessment and national dissemination.</p>
+            </div>
+        </div>
+
+        <h2 id="timeline">Implementation Timeline</h2>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">December 2025</div>
+                <div class="timeline-title">Review Criteria & Identify Pathway</div>
+                <p class="timeline-desc">Faculty review framework and identify primary scholarly pathway (A, B, or C).</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">December 31, 2025</div>
+                <div class="timeline-title">Submit SMART Goals to Chair</div>
+                <p class="timeline-desc">Faculty submit SMART goal(s) aligned with department goals, including proposed rating justification.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">January 2026</div>
+                <div class="timeline-title">Chair Review & Goal Negotiation</div>
+                <p class="timeline-desc">Chair reviews goals, meets with faculty if revisions needed, routes to Dean with proposed rating.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">January 31, 2026</div>
+                <div class="timeline-title">Goals Submitted to Associate Dean</div>
+                <p class="timeline-desc">Chair submits all faculty goals with proposed ratings to Associate Dean for final review.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Spring 2026</div>
+                <div class="timeline-title">Pilot Review & Refinement</div>
+                <p class="timeline-desc">Department reviews criteria effectiveness and refines framework for AY 2026-27.</p>
+            </div>
+        </div>
+
+        <div class="messages">
+            <h3>Key Takeaways for Faculty</h3>
+            <div class="messages-grid">
+                <div class="message">
+                    <div class="message-title">Achievable Standards</div>
+                    <p class="message-text">Designed to be realistic given 4-course teaching loads and consistent with other SBS departments.</p>
+                </div>
+                <div class="message">
+                    <div class="message-title">Multiple Pathways</div>
+                    <p class="message-text">Traditional research, teaching scholarship, and practice engagement are all valued equally.</p>
+                </div>
+                <div class="message">
+                    <div class="message-title">Context Matters</div>
+                    <p class="message-text">Evaluation considers individual circumstances while maintaining consistent standards.</p>
+                </div>
+                <div class="message">
+                    <div class="message-title">Clear Merit Pathway</div>
+                    <p class="message-text">Meeting baseline qualifies for COLA; SMART goals determine merit ratings (4 or 5).</p>
+                </div>
+                <div class="message">
+                    <div class="message-title">Pilot Year Flexibility</div>
+                    <p class="message-text">We're learning together and will refine the framework based on this year's experience.</p>
+                </div>
+                <div class="message">
+                    <div class="message-title">Faculty-Driven Goals</div>
+                    <p class="message-text">You initiate your SMART goals—this is about supporting your professional growth.</p>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <!-- Pathways Section -->
-        <section class="section section--muted" id="pathways">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-header__label">Scholarship Pathways</span>
-                    <h2 class="section-header__title">Three Paths to Meeting Expectations</h2>
-                    <p class="section-header__desc">ISOM recognizes multiple forms of intellectual contribution. Choose the pathway that fits your work.</p>
-                </div>
-
-                <div class="pathways">
-                    <div class="pathway" id="pathway-a">
-                        <div class="pathway__header" onclick="togglePathway('pathway-a')">
-                            <div class="pathway__letter">A</div>
-                            <div class="pathway__info">
-                                <h3 class="pathway__title">Scholarly Academic (Research)</h3>
-                                <p class="pathway__subtitle">Traditional disciplinary research for SA-qualified faculty</p>
-                            </div>
-                            <div class="pathway__toggle">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M6 9l6 6 6-6"/>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="pathway__content">
-                            <div class="pathway__inner">
-                                <div class="pathway__standard">
-                                    <div class="pathway__standard-label">Multi-Year Expectation</div>
-                                    <div class="pathway__standard-text">1-2 scholarly outputs over a 2-3 year period</div>
-                                </div>
-                                <div class="pathway__list-title">Qualifying Outputs Include:</div>
-                                <ul class="pathway__list">
-                                    <li>Conference presentations or workshop participation</li>
-                                    <li>Working papers or manuscripts in development</li>
-                                    <li>Publications (accepted, in press, or published)</li>
-                                    <li>Grant proposals submitted or ongoing</li>
-                                    <li>Research collaborations with tangible products</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="pathway" id="pathway-b">
-                        <div class="pathway__header" onclick="togglePathway('pathway-b')">
-                            <div class="pathway__letter">B</div>
-                            <div class="pathway__info">
-                                <h3 class="pathway__title">Scholarly Academic (Teaching Scholarship)</h3>
-                                <p class="pathway__subtitle">Scholarship of teaching and learning for SA-qualified faculty</p>
-                            </div>
-                            <div class="pathway__toggle">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M6 9l6 6 6-6"/>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="pathway__content">
-                            <div class="pathway__inner">
-                                <div class="pathway__standard">
-                                    <div class="pathway__standard-label">Multi-Year Expectation</div>
-                                    <div class="pathway__standard-text">1-2 scholarly outputs in teaching scholarship over 2-3 years</div>
-                                </div>
-                                <div class="pathway__list-title">Qualifying Outputs Include:</div>
-                                <ul class="pathway__list">
-                                    <li>Presentations at teaching-focused conferences (AACSB, AIS)</li>
-                                    <li>Publications in teaching journals or pedagogical outlets</li>
-                                    <li>Educational grant proposals or funded projects</li>
-                                    <li>Curriculum innovation with systematic assessment</li>
-                                    <li>Publications in venues like AACSB Insights, DSJIE</li>
-                                </ul>
-                                <div class="pathway__note">
-                                    <strong>Note:</strong> Teaching scholarship requires systematic inquiry and dissemination beyond simply excellent teaching.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="pathway" id="pathway-c">
-                        <div class="pathway__header" onclick="togglePathway('pathway-c')">
-                            <div class="pathway__letter">C</div>
-                            <div class="pathway__info">
-                                <h3 class="pathway__title">Practice Academic</h3>
-                                <p class="pathway__subtitle">Professional engagement for PA-qualified faculty</p>
-                            </div>
-                            <div class="pathway__toggle">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M6 9l6 6 6-6"/>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="pathway__content">
-                            <div class="pathway__inner">
-                                <div class="pathway__standard">
-                                    <div class="pathway__standard-label">Ongoing Expectation</div>
-                                    <div class="pathway__standard-text">~7-10 hours/week of discipline-relevant professional activity</div>
-                                </div>
-                                <div class="pathway__list-title">Qualifying Activities Include:</div>
-                                <ul class="pathway__list">
-                                    <li>Professional consulting or advisory work</li>
-                                    <li>Industry collaboration and applied projects</li>
-                                    <li>Professional certification maintenance</li>
-                                    <li>Active practice in professional domain</li>
-                                    <li>Executive education development</li>
-                                    <li>Professional association leadership</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="downloads">
+            <h3>Downloads</h3>
+            <div class="downloads-links">
+                <a href="ISOM_Meets_Expectations_Framework.docx" class="downloads-link">📄 Word Document</a>
+                <a href="https://github.com/harslan/isom-smart-goals" class="downloads-link">🔗 GitHub Repository</a>
             </div>
-        </section>
+        </div>
 
-        <!-- Comparison Section -->
-        <section class="section" id="comparison">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-header__label">Department Positioning</span>
-                    <h2 class="section-header__title">How ISOM Compares</h2>
-                    <p class="section-header__desc">Our framework balances the clarity of Marketing's approach with the flexibility of DPSHA's model.</p>
-                </div>
+        <div style="background: #f8f9fa; border: 1px solid var(--color-border); border-radius: 8px; padding: 1.5rem; margin-top: 2rem;">
+            <h3 style="margin-top: 0;">About This Framework</h3>
+            <p style="margin-bottom: 0.75rem;">This framework was developed by the ISOM Department as part of the Sawyer Business School's AY 2025-26 SMART Goals initiative. We share it openly, hoping it may be useful to colleagues navigating similar questions.</p>
+            <p style="margin-bottom: 0; font-size: 0.9rem; color: var(--color-text-light);"><strong>Questions?</strong> Contact Chrisy Yao (<a href="mailto:cyao@suffolk.edu" style="color: var(--color-teal);">cyao@suffolk.edu</a>) or Hasan Arslan (<a href="mailto:harslan@suffolk.edu" style="color: var(--color-teal);">harslan@suffolk.edu</a>)</p>
+        </div>
+    </article>
 
-                <div class="table-wrapper">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Aspect</th>
-                                <th>Marketing</th>
-                                <th>DPSHA</th>
-                                <th>ISOM (Proposed)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Research Standard</td>
-                                <td>1 R&R/acceptance OR 2 presentations over 2-3 years</td>
-                                <td>"Sustained program" with various pathways</td>
-                                <td>1-2 outputs over 2-3 years (consistent with Marketing)</td>
-                            </tr>
-                            <tr>
-                                <td>Specificity</td>
-                                <td>Highly quantitative</td>
-                                <td>Highly qualitative</td>
-                                <td>Balanced: clear targets with contextual flexibility</td>
-                            </tr>
-                            <tr class="highlight">
-                                <td>Pathway Diversity</td>
-                                <td>Single standard</td>
-                                <td>Multiple combinations</td>
-                                <td>Three distinct pathways (Research, Teaching Scholarship, Practice)</td>
-                            </tr>
-                            <tr>
-                                <td>Philosophy</td>
-                                <td>Measurable metrics</td>
-                                <td>Holistic judgment</td>
-                                <td>Clear expectations + contextual evaluation</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <!-- Examples Section -->
-        <section class="section section--muted" id="examples">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-header__label">SMART Goal Examples</span>
-                    <h2 class="section-header__title">What Merit Looks Like</h2>
-                    <p class="section-header__desc">Sample goals that clearly exceed baseline expectations and warrant merit ratings.</p>
-                </div>
-
-                <div class="examples-grid">
-                    <div class="example">
-                        <div class="example__header example__header--4">
-                            <div class="example__rating">4</div>
-                            <div class="example__label">Exceeds Expectations</div>
-                        </div>
-                        <div class="example__body">
-                            <div class="example__goal">
-                                "Publish 2 peer-reviewed articles and present at 2 national conferences by May 2026"
-                            </div>
-                            <p class="example__why"><strong>Why it works:</strong> Substantially exceeds the 1-2 output baseline, with multiple high-impact deliverables.</p>
-                        </div>
-                    </div>
-
-                    <div class="example">
-                        <div class="example__header example__header--5">
-                            <div class="example__rating">5</div>
-                            <div class="example__label">Far Exceeds Expectations</div>
-                        </div>
-                        <div class="example__body">
-                            <div class="example__goal">
-                                "Secure external grant funding ($50K+), publish in top-tier journal, and present at 2 national conferences by May 2026"
-                            </div>
-                            <p class="example__why"><strong>Why it works:</strong> Major external funding + top publication + multiple presentations = transformative achievement.</p>
-                        </div>
-                    </div>
-
-                    <div class="example">
-                        <div class="example__header example__header--4">
-                            <div class="example__rating">4</div>
-                            <div class="example__label">Exceeds Expectations</div>
-                        </div>
-                        <div class="example__body">
-                            <div class="example__goal">
-                                "Develop new experiential learning module across 3 courses with assessed student outcomes by May 2026"
-                            </div>
-                            <p class="example__why"><strong>Why it works:</strong> Significant curriculum innovation with systematic assessment—beyond standard teaching.</p>
-                        </div>
-                    </div>
-
-                    <div class="example">
-                        <div class="example__header example__header--5">
-                            <div class="example__rating">5</div>
-                            <div class="example__label">Far Exceeds Expectations</div>
-                        </div>
-                        <div class="example__body">
-                            <div class="example__goal">
-                                "Develop AI-integrated curriculum, publish teaching scholarship article, conduct 3 faculty workshops, and disseminate impact nationally by May 2026"
-                            </div>
-                            <p class="example__why"><strong>Why it works:</strong> Multi-faceted contribution spanning innovation + scholarship + service + national visibility.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Timeline Section -->
-        <section class="section" id="timeline">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-header__label">Implementation</span>
-                    <h2 class="section-header__title">Pilot Year Timeline</h2>
-                    <p class="section-header__desc">Key milestones for the AY 2025-26 implementation.</p>
-                </div>
-
-                <div class="timeline">
-                    <div class="timeline__item">
-                        <div class="timeline__dot"></div>
-                        <div class="timeline__date">December 2025</div>
-                        <h4 class="timeline__title">Review Criteria & Identify Pathway</h4>
-                        <p class="timeline__desc">Faculty review the framework and identify their primary scholarly pathway (A, B, or C).</p>
-                    </div>
-                    <div class="timeline__item">
-                        <div class="timeline__dot"></div>
-                        <div class="timeline__date">December 31, 2025</div>
-                        <h4 class="timeline__title">Submit SMART Goals to Chair</h4>
-                        <p class="timeline__desc">Faculty submit SMART goal(s) aligned with department goals. Include proposed rating justification.</p>
-                    </div>
-                    <div class="timeline__item">
-                        <div class="timeline__dot"></div>
-                        <div class="timeline__date">January 2026</div>
-                        <h4 class="timeline__title">Chair Review & Goal Negotiation</h4>
-                        <p class="timeline__desc">Chair reviews goals, meets with faculty if revisions needed, and routes to Dean with proposed rating.</p>
-                    </div>
-                    <div class="timeline__item">
-                        <div class="timeline__dot"></div>
-                        <div class="timeline__date">January 31, 2026</div>
-                        <h4 class="timeline__title">Goals Submitted to Associate Dean</h4>
-                        <p class="timeline__desc">Chair submits all faculty goals with proposed ratings to Associate Dean for final review.</p>
-                    </div>
-                    <div class="timeline__item">
-                        <div class="timeline__dot"></div>
-                        <div class="timeline__date">Spring 2026</div>
-                        <h4 class="timeline__title">Pilot Review & Refinement</h4>
-                        <p class="timeline__desc">Department reviews criteria effectiveness and refines framework for AY 2026-27.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Key Messages Section -->
-        <section class="section section--dark" id="messages">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-header__label">Key Takeaways</span>
-                    <h2 class="section-header__title">What Faculty Should Know</h2>
-                </div>
-
-                <div class="messages-grid">
-                    <div class="message">
-                        <h4 class="message__title">Achievable Standards</h4>
-                        <p class="message__text">Designed to be realistic given 4-course teaching loads and consistent with other SBS departments.</p>
-                    </div>
-                    <div class="message">
-                        <h4 class="message__title">Multiple Pathways</h4>
-                        <p class="message__text">Traditional research, teaching scholarship, and practice engagement are all valued equally.</p>
-                    </div>
-                    <div class="message">
-                        <h4 class="message__title">Context Matters</h4>
-                        <p class="message__text">Evaluation considers individual circumstances while maintaining consistent standards.</p>
-                    </div>
-                    <div class="message">
-                        <h4 class="message__title">Clear Merit Pathway</h4>
-                        <p class="message__text">Meeting baseline qualifies for COLA; SMART goals determine merit ratings (4 or 5).</p>
-                    </div>
-                    <div class="message">
-                        <h4 class="message__title">Pilot Year Flexibility</h4>
-                        <p class="message__text">We're learning together and will refine the framework based on this year's experience.</p>
-                    </div>
-                    <div class="message">
-                        <h4 class="message__title">Faculty-Driven Goals</h4>
-                        <p class="message__text">You initiate your SMART goals—this is about supporting your professional growth.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Back to Top -->
-    <button class="back-to-top" id="backToTop" aria-label="Back to top">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M12 19V5M5 12l7-7 7 7"/>
-        </svg>
-    </button>
-
-    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer__inner">
-                <div class="footer__brand">
-                    <div class="footer__logo">ISOM</div>
-                    <div>
-                        <div class="footer__title">ISOM Department</div>
-                        <div class="footer__subtitle">Sawyer Business School • Suffolk University</div>
-                    </div>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="footer-logo">ISOM</div>
+                <div>
+                    <div class="footer-title">ISOM Department</div>
+                    <div class="footer-subtitle">Sawyer Business School · Suffolk University</div>
                 </div>
-                <div class="footer__info">
-                    <div>Draft for Discussion • December 2025</div>
-                    <div>AY 2025-26 Pilot Year Framework</div>
-                </div>
+            </div>
+            <div class="footer-info">
+                <div>Draft for Discussion · December 2025</div>
+                <div><a href="https://www.suffolk.edu/business" class="footer-link">suffolk.edu/business</a></div>
             </div>
         </div>
     </footer>
 
     <script>
-        // ============================================
-        // NAVIGATION
-        // ============================================
-        const nav = document.getElementById('nav');
-        const progress = document.getElementById('progress');
-        const backToTop = document.getElementById('backToTop');
-        const navToggle = document.getElementById('navToggle');
-        const mobileNav = document.getElementById('mobileNav');
-        const mobileNavClose = document.getElementById('mobileNavClose');
-        const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('.nav__link');
-
-        // Scroll handler
-        let ticking = false;
-        window.addEventListener('scroll', () => {
-            if (!ticking) {
-                window.requestAnimationFrame(() => {
-                    handleScroll();
-                    ticking = false;
-                });
-                ticking = true;
-            }
-        });
-
-        function handleScroll() {
-            const scrollY = window.scrollY;
-            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-            
-            // Nav background
-            nav.classList.toggle('nav--scrolled', scrollY > 100);
-            
-            // Progress bar
-            progress.style.transform = `scaleX(${scrollY / docHeight})`;
-            
-            // Back to top
-            backToTop.classList.toggle('back-to-top--visible', scrollY > 500);
-            
-            // Active nav link
-            let current = '';
-            sections.forEach(section => {
-                if (scrollY >= section.offsetTop - 150) {
-                    current = section.id;
-                }
-            });
-            
-            navLinks.forEach(link => {
-                link.classList.toggle('nav__link--active', link.getAttribute('href') === `#${current}`);
-            });
+        function togglePathway(id) {
+            const pathway = document.getElementById(id);
+            pathway.classList.toggle('active');
         }
 
-        // Back to top
-        backToTop.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-
-        // Mobile nav
-        navToggle.addEventListener('click', () => {
-            mobileNav.classList.add('mobile-nav--open');
-            document.body.style.overflow = 'hidden';
-        });
-
-        mobileNavClose.addEventListener('click', () => {
-            mobileNav.classList.remove('mobile-nav--open');
-            document.body.style.overflow = '';
-        });
-
-        document.querySelectorAll('.mobile-nav__link').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileNav.classList.remove('mobile-nav--open');
-                document.body.style.overflow = '';
-            });
-        });
-
-        // Smooth scroll
+        // Smooth scroll for nav links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    const offset = 80;
+                    const offset = 20;
                     const top = target.offsetTop - offset;
                     window.scrollTo({ top, behavior: 'smooth' });
                 }
             });
-        });
-
-        // ============================================
-        // PATHWAYS ACCORDION
-        // ============================================
-        function togglePathway(id) {
-            const pathway = document.getElementById(id);
-            pathway.classList.toggle('pathway--active');
-        }
-
-        // ============================================
-        // INTERSECTION OBSERVER FOR ANIMATIONS
-        // ============================================
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.card, .track, .pathway, .example, .message, .timeline__item').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
         });
     </script>
 </body>
